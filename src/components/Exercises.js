@@ -3,7 +3,7 @@ import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
 
-import { exerciceOptions, fetchData } from "../utils/fetchData";
+import { exerciseOptions, fetchData } from "../utils/fetchData";
 import Loader from "./Loader.js";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
@@ -17,12 +17,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       if (bodyPart === "all") {
         exercisesData = await fetchData(
           "https://exercisedb.p.rapidapi.com/exercises",
-          exerciceOptions
+          exerciseOptions
         );
       } else {
         exercisesData = await fetchData(
           `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
-          exerciceOptions
+          exerciseOptions
         );
       }
 
