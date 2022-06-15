@@ -5,8 +5,8 @@ import Home from "./pages/Home.js";
 import Navbar from "./components/Navbar.js";
 import Footer from "./components/Footer.js";
 import "./App.css";
-import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
-import { createContext, useState } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { useState } from "react";
 
 const light = {
   palette: {
@@ -19,8 +19,6 @@ const dark = {
     mode: "dark",
   },
 };
-
-const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
