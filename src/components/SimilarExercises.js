@@ -9,7 +9,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
     <Typography
       sx={{ fontSize: { lg: "44px", xs: "25px" }, ml: "20px" }}
       fontWeight={700}
-      color="#000"
+      color="#a3a3a3"
       mb="33px"
     >
       Similar{" "}
@@ -32,7 +32,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
         mt: { lg: "100px", xs: "60px" },
       }}
       fontWeight={700}
-      color="#000"
+      color="#a3a3a3"
       mb="33px"
     >
       Similar{" "}

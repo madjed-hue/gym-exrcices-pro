@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { Stack, IconButton } from "@mui/material";
 import Logo from "../assets/images/logo.png";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const Navbar = () => {
+const Navbar = ({ changeTheme, isDarkTheme }) => {
   return (
     <Stack
       direction="row"
@@ -34,7 +36,7 @@ const Navbar = () => {
           to="/"
           style={{
             textDecoration: "none",
-            color: "#3A1212",
+            color: "#d74646ad",
             borderBottom: "3px solid #FF2625",
           }}
         >
@@ -42,10 +44,13 @@ const Navbar = () => {
         </Link>
         <a
           href="#exercises"
-          style={{ textDecoration: "none", color: "#3A1212" }}
+          style={{ textDecoration: "none", color: "#d74646" }}
         >
           Exercises
         </a>
+        <IconButton sx={{ ml: 1 }} onClick={changeTheme} color="inherit">
+          {isDarkTheme ? <LightModeIcon /> : <DarkModeIcon />}
+        </IconButton>
       </Stack>
     </Stack>
   );
